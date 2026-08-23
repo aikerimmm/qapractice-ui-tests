@@ -4,6 +4,7 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 .kotlin
+notifications/telegram.json
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
