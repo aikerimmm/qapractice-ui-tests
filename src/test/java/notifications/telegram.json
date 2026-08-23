@@ -1,0 +1,16 @@
+{
+  "base": {
+    "logo": "",
+    "project": "QA Practice UI Tests",
+    "environment": "Jenkins + Selenoid",
+    "comment": "UI regression",
+    "reportLink": "${BUILD_URL}allure/",
+    "language": "en",
+    "allureFolder": "allure-report/"
+  },
+  "telegram": {
+    "token": "${TELEGRAM_BOT_TOKEN}",
+    "chat": "${TELEGRAM_CHAT_ID}",
+    "replyTo": ""
+  }
+}
