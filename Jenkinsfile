@@ -10,7 +10,7 @@ pipeline {
 
         string(
                 name: 'BROWSER_VERSION',
-                defaultValue: '',
+                defaultValue: '148.0',
                 description: 'Browser version'
         )
 
@@ -26,15 +26,16 @@ pipeline {
                 description: 'Base URL'
         )
 
-        booleanParam(
-                name: 'HEADLESS',
-                defaultValue: true,
-                description: 'Run browser in headless mode'
-        )
         string(
                 name: 'REMOTE_URL',
                 defaultValue: 'https://user1:1234@selenoid.qa.guru/wd/hub',
                 description: 'Selenoid URL'
+        )
+
+        booleanParam(
+                name: 'HEADLESS',
+                defaultValue: false,
+                description: 'Run browser in headless mode'
         )
     }
 
@@ -46,21 +47,12 @@ pipeline {
             }
         }
 
-        stage('Check Browser') {
+        stage('Check Selenoid') {
             steps {
-                sh '''
-                    echo "Checking installed browsers..."
-
-                    which google-chrome || true
-                    which google-chrome-stable || true
-                    which chromium || true
-                    which chromium-browser || true
-
-                    google-chrome --version || true
-                    google-chrome-stable --version || true
-                    chromium --version || true
-                    chromium-browser --version || true
-                '''
+                sh """
+                    echo "Checking Selenoid..."
+                    curl -s ${params.REMOTE_URL}/status || true
+                """
             }
         }
 
@@ -74,6 +66,7 @@ pipeline {
                         -DbrowserVersion=${params.BROWSER_VERSION} \
                         -DbrowserSize=${params.BROWSER_SIZE} \
                         -DbaseUrl=${params.BASE_URL} \
+                        -DremoteUrl=${params.REMOTE_URL} \
                         -Dheadless=${params.HEADLESS}
                 """
             }
