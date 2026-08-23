@@ -23,14 +23,19 @@ public class BaseTest {
         Configuration.browserSize =
                 System.getProperty("browserSize", "1920x1080");
 
+        Configuration.headless =
+                Boolean.parseBoolean(
+                        System.getProperty("headless", "false")
+                );
+
         String browserVersion = System.getProperty("browserVersion");
         if (browserVersion != null && !browserVersion.isBlank()) {
             Configuration.browserVersion = browserVersion;
         }
 
-        String remote = System.getProperty("remote");
-        if (remote != null && !remote.isBlank()) {
-            Configuration.remote = remote;
+        String remoteUrl = System.getProperty("remoteUrl");
+        if (remoteUrl != null && !remoteUrl.isBlank()) {
+            Configuration.remote = remoteUrl;
         }
     }
 

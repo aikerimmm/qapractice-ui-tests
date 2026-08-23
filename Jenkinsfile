@@ -31,6 +31,11 @@ pipeline {
                 defaultValue: true,
                 description: 'Run browser in headless mode'
         )
+        string(
+                name: 'REMOTE_URL',
+                defaultValue: 'https://user1:1234@selenoid.qa.guru/wd/hub',
+                description: 'Selenoid URL'
+        )
     }
 
     stages {
