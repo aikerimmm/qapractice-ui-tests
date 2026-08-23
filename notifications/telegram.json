@@ -1,12 +1,13 @@
 {
   "base": {
-    "logo": "",
     "project": "QA Practice UI Tests",
-    "environment": "Jenkins + Selenoid",
-    "comment": "UI regression",
+    "environment": "remote",
+    "comment": "QA Automation UI tests",
     "reportLink": "${BUILD_URL}allure/",
     "language": "en",
-    "allureFolder": "allure-report/"
+    "allureFolder": "allure-report",
+    "allureResultsFolder": "build/allure-results",
+    "enableChart": true
   },
   "telegram": {
     "token": "${TELEGRAM_BOT_TOKEN}",
