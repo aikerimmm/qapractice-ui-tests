@@ -6,6 +6,7 @@ import io.qameta.allure.Step;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.WebDriverRunner.url;
 
 public class WebFormPage {
 
@@ -51,9 +52,20 @@ public class WebFormPage {
     private final SelenideElement successMessage =
             $("[data-testid='forms-success']");
 
+//    @Step("Open Web Form page")
+//    public WebFormPage openPage() {
+//        open("/practice-forms");
+//
+//        countrySelect.shouldBe(visible);
+//
+//        return this;
+//    }
+
     @Step("Open Web Form page")
     public WebFormPage openPage() {
         open("/practice-forms");
+
+        System.out.println("CURRENT URL: " + url());
 
         countrySelect.shouldBe(visible);
 
