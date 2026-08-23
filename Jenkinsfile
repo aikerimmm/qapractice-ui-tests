@@ -34,9 +34,28 @@ pipeline {
     }
 
     stages {
+
         stage('Checkout') {
             steps {
                 checkout scm
+            }
+        }
+
+        stage('Check Browser') {
+            steps {
+                sh '''
+                    echo "Checking installed browsers..."
+
+                    which google-chrome || true
+                    which google-chrome-stable || true
+                    which chromium || true
+                    which chromium-browser || true
+
+                    google-chrome --version || true
+                    google-chrome-stable --version || true
+                    chromium --version || true
+                    chromium-browser --version || true
+                '''
             }
         }
 
