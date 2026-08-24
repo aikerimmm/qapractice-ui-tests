@@ -69,7 +69,13 @@ Allure Report is used to display test execution results, test steps and attachme
 
 <p align="center">
   <a href="https://jenkins.qa.guru/job/41-Aikerim-qapractice-ui-tests/allure/">
-    <img src="images/allure-report2.png" alt="Allure Report" width="850">
+    <img src="images/allure-report.png" alt="Allure Report Overview" width="850">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://jenkins.qa.guru/job/41-Aikerim-qapractice-ui-tests/allure/">
+    <img src="images/allure-report2.png" alt="Allure Report Test Results" width="850">
   </a>
 </p>
 
@@ -81,6 +87,12 @@ The project is integrated with Allure TestOps for test management and test execu
 
 <p align="center">
   <a href="https://allure.qa.guru/launch/55931">
-    <img src="images/allure-testops.png" alt="Allure TestOps" width="850">
+    <img src="images/allure-testops1.png" alt="Allure TestOps Launch" width="850">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://allure.qa.guru/launch/55931">
+    <img src="images/allure-testops2.png" alt="Allure TestOps Test Results" width="850">
   </a>
 </p>
