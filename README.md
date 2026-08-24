@@ -35,31 +35,52 @@ Run tests locally:
 
 ```bash
 ./gradlew clean test
+```
 
 Generate Allure Report:
 
+```bash
 ./gradlew allureReport
+```
 
 Open Allure Report:
 
+```bash
 ./gradlew allureServe
-Jenkins
+```
+
+## Jenkins
 
 The project is integrated with Jenkins CI for remote test execution.
 
-Open Jenkins Job
-<p align="center"> <a href="https://jenkins.qa.guru/job/41-Aikerim-qapractice-ui-tests/"> <img src="images/jenkins.png" alt="Jenkins" width="850"> </a> </p>
-Allure Report
+### [Open Jenkins Job](https://jenkins.qa.guru/job/41-Aikerim-qapractice-ui-tests/)
+
+<p align="center">
+  <a href="https://jenkins.qa.guru/job/41-Aikerim-qapractice-ui-tests/">
+    <img src="images/jenkins.png" alt="Jenkins" width="850">
+  </a>
+</p>
+
+## Allure Report
 
 Allure Report is used to display test execution results, test steps and attachments.
 
-Open Allure Report
-<p align="center"> <a href="https://jenkins.qa.guru/job/41-Aikerim-qapractice-ui-tests/allure/"> <img src="images/allure-report.png" alt="Allure Report" width="850"> </a> </p>
-<img src="images/allure-report2.png" alt="Allure Report" width="850"> </a> </p>
-Allure TestOps
+### [Open Allure Report](https://jenkins.qa.guru/job/41-Aikerim-qapractice-ui-tests/allure/)
+
+<p align="center">
+  <a href="https://jenkins.qa.guru/job/41-Aikerim-qapractice-ui-tests/allure/">
+    <img src="images/allure-report2.png" alt="Allure Report" width="850">
+  </a>
+</p>
+
+## Allure TestOps
 
 The project is integrated with Allure TestOps for test management and test execution analysis.
 
-Open Allure TestOps
-<p align="center"> <a href="https://allure.qa.guru/launch/55931"> <img src="images/allure-testops1.png" alt="Allure TestOps" width="850"> </a> </p>
- <img src="images/allure-testops2.png" alt="Allure TestOps" width="850"> </a> </p>```
+### [Open Allure TestOps](https://allure.qa.guru/launch/55931)
+
+<p align="center">
+  <a href="https://allure.qa.guru/launch/55931">
+    <img src="images/allure-testops.png" alt="Allure TestOps" width="850">
+  </a>
+</p>
