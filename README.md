@@ -96,3 +96,9 @@ The project is integrated with Allure TestOps for test management and test execu
     <img src="images/allure-testops2.png" alt="Allure TestOps Test Results" width="850">
   </a>
 </p>
+
+## Test Execution
+
+<p align="center">
+  <img src="images/test-execution.gif" alt="UI Test Execution" width="800">
+</p>
