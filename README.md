@@ -1,140 +1,65 @@
 # QA Practice UI Tests
 
 <p align="center">
-  <img src="images/qa-practice.png" alt="QA Practice" width="650">
+  <img src="images/qa-practice.png" alt="QA Practice UI Tests" width="350">
 </p>
 
 ## About the project
 
 UI test automation project for the QA Practice web application.
 
-The project covers main user scenarios and demonstrates UI test automation using Java, Selenide, JUnit 5, Gradle, Allure Report, Jenkins and Selenoid.
+The project covers main user scenarios and demonstrates UI test automation using Java, Selenide, JUnit 5, Gradle, Allure Report, Allure TestOps, Jenkins and Selenoid.
 
-## 🛠 Technology Stack
-
-<p align="center">
-  <img width="55" title="Java" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/>
-  &nbsp;&nbsp;
-  <img width="55" title="Gradle" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gradle/gradle-original.svg"/>
-  &nbsp;&nbsp;
-  <img width="55" title="Jenkins" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"/>
-  &nbsp;&nbsp;
-  <img width="55" title="Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>
-  &nbsp;&nbsp;
-  <img width="55" title="GitHub" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"/>
-  &nbsp;&nbsp;
-  <img width="55" title="IntelliJ IDEA" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg"/>
-</p>
+## Technology Stack
 
 <p align="center">
-  <b>Java 21</b> •
-  <b>Selenide</b> •
-  <b>Selenium WebDriver</b> •
-  <b>JUnit 5</b> •
-  <b>Gradle</b> •
-  <b>Allure Report</b> •
-  <b>Selenoid</b> •
-  <b>Jenkins</b>
+  <img src="https://img.shields.io/badge/Java-21-orange">
+  <img src="https://img.shields.io/badge/Selenide-7-green">
+  <img src="https://img.shields.io/badge/JUnit-5-blue">
+  <img src="https://img.shields.io/badge/Gradle-8-green">
+  <img src="https://img.shields.io/badge/Allure-Report-yellow">
+  <img src="https://img.shields.io/badge/Jenkins-CI%2FCD-red">
 </p>
 
-## 🧪 Test Coverage
+## Test Scenarios
 
-Automated UI tests cover the following QA Practice functionality:
+- Successful login with valid credentials
+- Login with invalid credentials
+- Login validation with empty required fields
+- Web form submission
+- UI element validation
 
-### 🔐 Login
+## Running Tests
 
-- successful login with valid credentials
-- login with invalid credentials
-- validation of empty required fields
-- parameterized authentication tests
-
-### 📝 Web Form
-
-- successful form submission with valid data
-- validation of empty required fields
-
-### 🛒 Ecommerce
-
-- product search
-- adding a product to the cart
-- cart verification
-
-## ▶️ Running Tests
-
-Run all tests:
+Run tests locally:
 
 ```bash
 ./gradlew clean test
-```
 
-Run tests remotely with Selenoid:
+Generate Allure Report:
 
-```bash
-./gradlew clean test \
-  -Dbrowser=Chrome \
-  -DbrowserVersion=148.0 \
-  -DbrowserSize=1920x1080 \
-  -DbaseUrl=https://www.qapractice.com \
-  -DremoteUrl=<SELENOID_URL> \
-  -Dheadless=false
-```
-
-## 🔄 Jenkins
-
-The project is integrated with Jenkins for automated test execution.
-
-<p align="center">
-  <a href="https://jenkins.qa.guru/job/41-Aikerim-qapractice-ui-tests/">
-    <b>Open Jenkins Job</b>
-  </a>
-</p>
-
-Tests are executed remotely using **Selenoid**.
-
-<p align="center">
-  <img src=".github/images/jenkins.png" alt="Jenkins" width="75%">
-</p>
-
-## 📊 Allure Report
-
-Allure Report is generated automatically after test execution.
-
-The report contains:
-
-- test execution results
-- test steps
-- screenshots
-- page source
-- execution duration
-- failure details
-
-<p align="center">
-  <img src=".github/images/allure.png" alt="Allure Report" width="75%">
-</p>
-
-Generate the report locally:
-
-```bash
 ./gradlew allureReport
-```
 
-Open the report:
+Open Allure Report:
 
-```bash
 ./gradlew allureServe
-```
+Jenkins
 
-## 🎥 Test Execution
+The project is integrated with Jenkins CI for remote test execution.
 
-Tests are executed remotely in **Selenoid**.
+Open Jenkins Job
+<p align="center"> <a href="https://jenkins.qa.guru/job/41-Aikerim-qapractice-ui-tests/"> <img src="images/jenkins.png" alt="Jenkins" width="850"> </a> </p>
+Allure Report
 
-<p align="center">
-  <img src=".github/images/video/test-execution.gif" alt="Test Execution" width="750">
-</p>
+Allure Report is used to display test execution results, test steps and attachments.
 
+Open Allure Report
+<p align="center"> <a href="https://jenkins.qa.guru/job/41-Aikerim-qapractice-ui-tests/allure/"> <img src="images/allure-report.png" alt="Allure Report" width="850"> </a> </p>
+<img src="images/allure-report2.png" alt="Allure Report" width="850"> </a> </p>
+Allure TestOps
 
-## 👩‍💻 Author
+The project is integrated with Allure TestOps for test management and test execution analysis.
 
-**Aikerim**
-
-QA Automation Engineer
+Open Allure TestOps
+<p align="center"> <a href="https://allure.qa.guru/launch/55931"> <img src="images/allure-testops1.png" alt="Allure TestOps" width="850"> </a> </p>
+ <img src="images/allure-testops2.png" alt="Allure TestOps" width="850"> </a> </p>```
