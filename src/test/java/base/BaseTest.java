@@ -14,19 +14,13 @@ public class BaseTest {
 
     @BeforeAll
     static void setUp() {
-        Configuration.baseUrl =
-                System.getProperty("baseUrl", "https://www.qapractice.com");
+        Configuration.baseUrl = System.getProperty("baseUrl", "https://www.qapractice.com");
 
-        Configuration.browser =
-                System.getProperty("browser", "chrome");
+        Configuration.browser = System.getProperty("browser", "chrome");
 
-        Configuration.browserSize =
-                System.getProperty("browserSize", "1920x1080");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
 
-        Configuration.headless =
-                Boolean.parseBoolean(
-                        System.getProperty("headless", "false")
-                );
+        Configuration.headless = Boolean.parseBoolean(System.getProperty("headless", "false"));
 
         String browserVersion = System.getProperty("browserVersion");
         if (browserVersion != null && !browserVersion.isBlank()) {

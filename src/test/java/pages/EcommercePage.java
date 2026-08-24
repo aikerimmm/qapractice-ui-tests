@@ -8,11 +8,8 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class EcommercePage {
 
-    private final SelenideElement searchInput =
-            $("[data-testid='ecom-search']");
-
-    private final SelenideElement cartButton =
-            $("[data-testid='ecom-cart-button']");
+    private final SelenideElement searchInput = $("[data-testid='ecom-search']");
+    private final SelenideElement cartButton = $("[data-testid='ecom-cart-button']");
 
     @Step("Open E-commerce page")
     public EcommercePage openPage() {

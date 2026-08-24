@@ -6,66 +6,27 @@ import io.qameta.allure.Step;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.WebDriverRunner.url;
 
 public class WebFormPage {
 
-    private final SelenideElement countrySelect =
-            $("[data-testid='forms-country']");
-
-    private final SelenideElement titleSelect =
-            $("[data-testid='forms-title']");
-
-    private final SelenideElement firstNameInput =
-            $("[data-testid='forms-first-name']");
-
-    private final SelenideElement lastNameInput =
-            $("[data-testid='forms-last-name']");
-
-    private final SelenideElement dateOfBirthInput =
-            $("[data-testid='forms-dob']");
-
-    private final SelenideElement dateOfJoiningInput =
-            $("[data-testid='forms-doj']");
-
-    private final SelenideElement emailInput =
-            $("[data-testid='forms-email']");
-
-    private final SelenideElement phoneCodeSelect =
-            $("[data-testid='forms-phone-code']");
-
-    private final SelenideElement phoneNumberInput =
-            $("[data-testid='forms-phone-number']");
-
-    private final SelenideElement emailRadio =
-            $("[data-testid='forms-comm-email']");
-
-    private final SelenideElement phoneRadio =
-            $("[data-testid='forms-comm-phone']");
-
-    private final SelenideElement clearButton =
-            $("[data-testid='forms-clear']");
-
-    private final SelenideElement submitButton =
-            $("[data-testid='forms-submit']");
-
-    private final SelenideElement successMessage =
-            $("[data-testid='forms-success']");
-
-//    @Step("Open Web Form page")
-//    public WebFormPage openPage() {
-//        open("/practice-forms");
-//
-//        countrySelect.shouldBe(visible);
-//
-//        return this;
-//    }
+    private final SelenideElement countrySelect = $("[data-testid='forms-country']");
+    private final SelenideElement titleSelect = $("[data-testid='forms-title']");
+    private final SelenideElement firstNameInput = $("[data-testid='forms-first-name']");
+    private final SelenideElement lastNameInput = $("[data-testid='forms-last-name']");
+    private final SelenideElement dateOfBirthInput = $("[data-testid='forms-dob']");
+    private final SelenideElement dateOfJoiningInput = $("[data-testid='forms-doj']");
+    private final SelenideElement emailInput = $("[data-testid='forms-email']");
+    private final SelenideElement phoneCodeSelect = $("[data-testid='forms-phone-code']");
+    private final SelenideElement phoneNumberInput = $("[data-testid='forms-phone-number']");
+    private final SelenideElement emailRadio = $("[data-testid='forms-comm-email']");
+    private final SelenideElement phoneRadio = $("[data-testid='forms-comm-phone']");
+    private final SelenideElement clearButton = $("[data-testid='forms-clear']");
+    private final SelenideElement submitButton = $("[data-testid='forms-submit']");
+    private final SelenideElement successMessage = $("[data-testid='forms-success']");
 
     @Step("Open Web Form page")
     public WebFormPage openPage() {
         open("/practice-forms");
-
-        System.out.println("CURRENT URL: " + url());
 
         countrySelect.shouldBe(visible);
 
@@ -134,14 +95,6 @@ public class WebFormPage {
         return this;
     }
 
-    @Step("Clear form")
-    public WebFormPage clear() {
-        clearButton
-                .shouldBe(visible)
-                .click();
-
-        return this;
-    }
     @Step("Select phone code: {phoneCode}")
     public WebFormPage selectPhoneCode(String phoneCode) {
         phoneCodeSelect
@@ -169,14 +122,6 @@ public class WebFormPage {
         return this;
     }
 
-    @Step("Select Phone as preferred communication method")
-    public WebFormPage selectPhoneCommunication() {
-        phoneRadio
-                .shouldBe(visible)
-                .click();
-
-        return this;
-    }
     @Step("Verify successful form submission")
     public WebFormPage verifySuccessfulSubmission() {
         successMessage
@@ -185,6 +130,7 @@ public class WebFormPage {
 
         return this;
     }
+
     @Step("Verify validation error: {expectedText}")
     public WebFormPage verifyValidationError(String expectedText) {
         $$("small.text-danger")

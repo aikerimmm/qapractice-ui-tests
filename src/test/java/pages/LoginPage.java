@@ -8,20 +8,11 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class LoginPage {
 
-    private final SelenideElement emailInput =
-            $("[data-testid='login-email']");
-
-    private final SelenideElement passwordInput =
-            $("[data-testid='login-password']");
-
-    private final SelenideElement signInButton =
-            $("[data-testid='login-submit']");
-
-    private final SelenideElement successMessage =
-            $("[data-testid='login-success']");
-
-    private final SelenideElement errorMessage =
-            $("[data-testid='login-error']");
+    private final SelenideElement emailInput = $("[data-testid='login-email']");
+    private final SelenideElement passwordInput = $("[data-testid='login-password']");
+    private final SelenideElement signInButton = $("[data-testid='login-submit']");
+    private final SelenideElement successMessage = $("[data-testid='login-success']");
+    private final SelenideElement errorMessage = $("[data-testid='login-error']");
 
     @Step("Open login page")
     public LoginPage openPage() {

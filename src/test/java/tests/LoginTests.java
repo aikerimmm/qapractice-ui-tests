@@ -54,11 +54,7 @@ public class LoginTests extends BaseTest {
     @Owner("Aikerim")
     @Severity(NORMAL)
     @DisplayName("Login with empty required fields")
-    void loginWithEmptyRequiredFieldsTest(
-            String email,
-            String password,
-            String expectedError
-    ) {
+    void loginWithEmptyRequiredFieldsTest(String email, String password, String expectedError) {
         loginPage
                 .openPage()
                 .login(email, password)
