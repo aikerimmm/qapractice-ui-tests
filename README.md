@@ -1,4 +1,4 @@
-# QA Practice UI Tests
+# UI Test Automation for [QA Practice](https://www.qapractice.com/)
 
 <p align="center">
   <img src="images/qa-practice.png" alt="QA Practice UI Tests" width="350">
