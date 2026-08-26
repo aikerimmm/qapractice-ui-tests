@@ -51,6 +51,6 @@ tasks.withType(Test).configureEach {
 
     testLogging {
         events 'started', 'skipped', 'passed', 'failed', 'standard_error', 'standard_out'
-        exceptionFormat 'short'
+        exceptionFormat 'full'
     }
 }
