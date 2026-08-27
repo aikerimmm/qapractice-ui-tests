@@ -83,7 +83,7 @@ Allure Report is used to display test execution results, test steps and attachme
 
 The project is integrated with Allure TestOps for test management and test execution analysis.
 
-### [Open Allure TestOps](https://allure.qa.guru/launch/55931)
+### [Open Allure TestOps](https://allure.qa.guru/launch/56071)
 
 <p align="center">
   <a href="https://allure.qa.guru/launch/55931">
